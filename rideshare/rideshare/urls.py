@@ -30,7 +30,7 @@ urlpatterns = [
     path('rides/', RideListView.as_view(), name='ride-list'),
     path('rides/create/', RideCreateView.as_view(), name='ride-create'),
     path('rides/<int:pk>/', RideDetailView.as_view(), name='ride-detail'),
-    path('rides/<int:pk>/status/', RideStatusUpdateAPIView.as_view(), name='ride-status-update'),
-    path('rides/match/', MatchRideView.as_view(), name='ride-match'),
-    path('rides/<int:pk>/accept/', AcceptRideView.as_view(), name='ride-accept'),
+    path('status/<int:pk>/', RideStatusUpdateAPIView.as_view(), name='ride-status-update'),
+    path('match/', MatchRideView.as_view(), name='ride-match'),
+    path('accept/<int:pk>/', AcceptRideView.as_view(), name='ride-accept'),
 ]
